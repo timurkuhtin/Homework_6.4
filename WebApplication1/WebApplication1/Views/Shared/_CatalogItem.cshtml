@@ -1,0 +1,26 @@
+﻿@model Cutlery
+
+<div class="col-4">
+            <div class="card">
+                    <div class="text-end">
+                        <a asp-controller="Catalog" asp-action="EditCutleryById" asp-route-id="@Model.Id">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/2356/2356780.png"
+                                alt="edit"
+                                width="35"
+                            />
+                        </a>
+                    </div>
+                <div class="card-body">
+                    <a asp-controller="Catalog" asp-action="GetCutleryById" asp-route-id="@Model.Id">
+                        <h5 class="card-title">@Model.Material @Model.Type</h5>
+                    </a>
+                    <p class="card-text">@Model.Price UAH</p>
+                    <div
+                        class="btn btn-primary"
+                    >
+                        Add to cart
+                    </div>
+                </div>
+            </div>
+        </div>
